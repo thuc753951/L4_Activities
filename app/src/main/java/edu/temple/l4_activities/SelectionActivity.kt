@@ -16,7 +16,7 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
     val adapting = ImageAdapter(imageArray, this)
 
     val secondActivityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-        Log.d("Returned data", it.data?.getStringExtra("resultValue").toString())
+        //Log.d("Returned data", it.data?.getStringExtra("resultValue").toString())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +53,7 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
 
     override fun onItemClick(position: Int) { // send to activity 2
         val secondActivityIntent = Intent(this@SelectionActivity, DisplayActivity::class.java)
-        secondActivityIntent.putExtra(imageArray[position].description, imageArray[position].resourceId)
+        secondActivityIntent.putExtra("String", imageArray[position].description)
         startActivity(secondActivityIntent)
         //val imageView = findViewById<ImageView>(R.id.imageView)
         //val textView = findViewById<TextView>(R.id.textView)
