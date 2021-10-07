@@ -1,9 +1,12 @@
 package edu.temple.l4_activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -11,6 +14,10 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
 
     var imageArray = ArrayList<ImageObject>()
     val adapting = ImageAdapter(imageArray, this)
+
+    val secondActivityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        Log.d("Returned data", it.data?.getStringExtra("resultValue").toString())
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,16 +42,24 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
         recyclerView.layoutManager = GridLayoutManager(this, 2,GridLayoutManager.VERTICAL, false)
         recyclerView.setHasFixedSize(true)
 
+        val secondActivityIntent = Intent(this, DisplayActivity::class.java)
+
+        //launch
+
+
 
 
     }
 
     override fun onItemClick(position: Int) { // send to activity 2
-        val imageView = findViewById<ImageView>(R.id.imageView)
-        val textView = findViewById<TextView>(R.id.textView)
-        textView.setTextSize(20f)
-        imageView.setImageResource(imageArray[position].resourceId)
-        textView.text = imageArray[position].description
-        adapting.notifyItemChanged(position)
+        val secondActivityIntent = Intent(this@SelectionActivity, DisplayActivity::class.java)
+        secondActivityIntent.putExtra(imageArray[position].description, imageArray[position].resourceId)
+        startActivity(secondActivityIntent)
+        //val imageView = findViewById<ImageView>(R.id.imageView)
+        //val textView = findViewById<TextView>(R.id.textView)
+        //textView.setTextSize(20f)
+        //imageView.setImageResource(imageArray[position].resourceId)
+        //textView.text = imageArray[position].description
+        //adapting.notifyItemChanged(position)
     }
 }
