@@ -33,13 +33,13 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.adapter = adapting
         recyclerView.layoutManager = GridLayoutManager(this, 2,GridLayoutManager.VERTICAL, false)
-        //recyclerView.setHasFixedSize(true)
+        recyclerView.setHasFixedSize(true)
 
 
 
     }
 
-    override fun onItemClick(position: Int) {
+    override fun onItemClick(position: Int) { // send to activity 2
         val imageView = findViewById<ImageView>(R.id.imageView)
         val textView = findViewById<TextView>(R.id.textView)
         textView.setTextSize(20f)

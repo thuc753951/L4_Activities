@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">L4_Activities</string>
+    <string name="huh">huh?</string>
+    <string name="todo">TODO</string>
 </resources>
