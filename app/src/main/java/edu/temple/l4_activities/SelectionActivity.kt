@@ -27,14 +27,14 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
         imageArray.add(ImageObject("druid",R.drawable.druid))
         imageArray.add(ImageObject("monk",R.drawable.monk))
         imageArray.add(ImageObject("ranger", R.drawable.ranger))
-        imageArray.add(ImageObject("rouge", R.drawable.rogue))
+        imageArray.add(ImageObject("rogue", R.drawable.rogue))
         imageArray.add(ImageObject("warlock", R.drawable.warlock))
         imageArray.add(ImageObject("wizard", R.drawable.wizard))
         imageArray.add(ImageObject("cleric", R.drawable.cleric))
-        imageArray.add(ImageObject("Barbarian", R.drawable.barbarian))
-        imageArray.add(ImageObject("Bard", R.drawable.bard))
-        imageArray.add(ImageObject("Fighters", R.drawable.fighter))
-        imageArray.add(ImageObject("Paladin", R.drawable.paladin))
+        imageArray.add(ImageObject("barbarian", R.drawable.barbarian))
+        imageArray.add(ImageObject("bard", R.drawable.bard))
+        imageArray.add(ImageObject("fighter", R.drawable.fighter))
+        imageArray.add(ImageObject("paladin", R.drawable.paladin))
 
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
@@ -42,7 +42,7 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
         recyclerView.layoutManager = GridLayoutManager(this, 2,GridLayoutManager.VERTICAL, false)
         recyclerView.setHasFixedSize(true)
 
-        val secondActivityIntent = Intent(this, DisplayActivity::class.java)
+        //val secondActivityIntent = Intent(this, DisplayActivity::class.java)
 
         //launch
 

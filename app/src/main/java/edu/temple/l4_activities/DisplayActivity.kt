@@ -1,8 +1,10 @@
 package edu.temple.l4_activities
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -24,10 +26,13 @@ class DisplayActivity : AppCompatActivity() {
         }
 
         imageView.setImageResource(getId(this, imageName))
+        textView.textSize = 25f
+        textView.setTextColor(Color.BLACK)
+        textView.gravity = Gravity.CENTER_HORIZONTAL
         textView.text = imageName
 
     }
-    fun getId(context: Context, imageName: String): Int { //returns the object similar to R.drawable.imageName given a string input of the image
-        return context.resources.getIdentifier("drawable/$imageName", null, context.packageName)
+    private fun getId(context: Context, imageName: String): Int { //returns the object similar to R.drawable.imageName given a string input of the image
+        return context.resources.getIdentifier(imageName,"drawable", context.packageName)
     }
 }
