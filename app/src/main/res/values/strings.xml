@@ -21,5 +21,5 @@
         <item>paladin</item>
     </string-array>
     <string name="click_image_below_to_view">Click Image Below to View</string>
-    <string name="text">something</string>
+    <string name="text" >something</string>
 </resources>

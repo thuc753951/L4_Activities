@@ -14,6 +14,19 @@ class DisplayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display)
         //Log.d("Second activity state", "onCreate() fired")
+        val myArray = ArrayList<Int>()
+        myArray.add(R.drawable.druid)
+        myArray.add(R.drawable.monk)
+        myArray.add(R.drawable.ranger)
+        myArray.add(R.drawable.rogue)
+        myArray.add(R.drawable.warlock)
+        myArray.add(R.drawable.wizard)
+        myArray.add(R.drawable.cleric)
+        myArray.add(R.drawable.barbarian)
+        myArray.add(R.drawable.bard)
+        myArray.add(R.drawable.fighter)
+        myArray.add(R.drawable.paladin)
+
         val intent = intent
         val extras = intent.extras
         val imageView = findViewById<ImageView>(R.id.imageView)
@@ -24,8 +37,29 @@ class DisplayActivity : AppCompatActivity() {
         }else{
             imageName = ""
         }
-
-        imageView.setImageResource(getId(this, imageName))
+        if(imageName == "druide"){
+            imageView.setImageResource(myArray[0])
+        }else if(imageName == "moine"){
+            imageView.setImageResource(myArray[1])
+        }else if(imageName == "ranger"){
+            imageView.setImageResource(myArray[2])
+        }else if(imageName == "voyou"){
+            imageView.setImageResource(myArray[3])
+        }else if(imageName == "démoniste"){
+            imageView.setImageResource(myArray[4])
+        }else if(imageName == "sorcier"){
+            imageView.setImageResource(myArray[5])
+        }else if(imageName == "clerc"){
+            imageView.setImageResource(myArray[6])
+        }else if(imageName == "barbare"){
+            imageView.setImageResource(myArray[7])
+        }else if(imageName == "barde"){
+            imageView.setImageResource(myArray[8])
+        }else if(imageName == "combattant"){
+            imageView.setImageResource(myArray[9])
+        }else if(imageName == "paladin"){
+            imageView.setImageResource(myArray[10])
+        }
         textView.textSize = 25f
         textView.setTextColor(Color.BLACK)
         textView.gravity = Gravity.CENTER_HORIZONTAL
