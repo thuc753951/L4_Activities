@@ -37,27 +37,27 @@ class DisplayActivity : AppCompatActivity() {
         }else{
             imageName = ""
         }
-        if(imageName == "druide"){
+        if((imageName == "druide") || (imageName == "druid")){
             imageView.setImageResource(myArray[0])
-        }else if(imageName == "moine"){
+        }else if((imageName == "moine")||(imageName == "monk")){
             imageView.setImageResource(myArray[1])
         }else if(imageName == "ranger"){
             imageView.setImageResource(myArray[2])
-        }else if(imageName == "voyou"){
+        }else if((imageName == "voyou")||(imageName == "rogue")){
             imageView.setImageResource(myArray[3])
-        }else if(imageName == "démoniste"){
+        }else if((imageName == "démoniste")||(imageName == "warlock")){
             imageView.setImageResource(myArray[4])
-        }else if(imageName == "sorcier"){
+        }else if((imageName == "sorcier")||(imageName == "wizard")){
             imageView.setImageResource(myArray[5])
-        }else if(imageName == "clerc"){
+        }else if((imageName == "clerc")||(imageName == "cleric")){
             imageView.setImageResource(myArray[6])
-        }else if(imageName == "barbare"){
+        }else if((imageName == "barbare")||(imageName == "barbarian")){
             imageView.setImageResource(myArray[7])
-        }else if(imageName == "barde"){
+        }else if((imageName == "barde")||(imageName == "bard")){
             imageView.setImageResource(myArray[8])
-        }else if(imageName == "combattant"){
+        }else if((imageName == "combattant")||(imageName == "fighter")){
             imageView.setImageResource(myArray[9])
-        }else if(imageName == "paladin"){
+        }else if((imageName == "paladin")||(imageName == "paladin")){
             imageView.setImageResource(myArray[10])
         }
         textView.textSize = 25f
