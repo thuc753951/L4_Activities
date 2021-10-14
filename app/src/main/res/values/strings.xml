@@ -6,7 +6,9 @@
     <string name="Display_Activity">Display Activity</string>
     <string name="drawable">drawable</string>
     <string name="String">String</string>
-    <string name="blank"></string>
+    <string name="Int" translatable="false">Int</string>
+    <string name="bundle" translatable="false">bundle</string>
+    <string name="blank" translatable="false"></string>
     <string-array name="name_array">
         <item>druid</item>
         <item>monk</item>

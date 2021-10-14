@@ -54,7 +54,10 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
 
     override fun onItemClick(position: Int) { // send to activity 2
         val secondActivityIntent = Intent(this@SelectionActivity, DisplayActivity::class.java)
-        secondActivityIntent.putExtra(getString(R.string.String), imageArray[position].description)
+        val myBundle = Bundle()
+        myBundle.putString(getString(R.string.String),imageArray[position].description)
+        myBundle.putInt(getString(R.string.Int),imageArray[position].resourceId)
+        secondActivityIntent.putExtra(getString(R.string.bundle), myBundle)
         startActivity(secondActivityIntent)
         //val imageView = findViewById<ImageView>(R.id.imageView)
         //val textView = findViewById<TextView>(R.id.textView)
