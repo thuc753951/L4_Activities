@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">L4_Activities</string>
-    <string name="huh">huh?</string>
-    <string name="todo">TODO</string>
+    <string name="please_select_an_item">Please Select An Item</string>
+    <string name="image_file">Image file</string>
+    <string name="Selection_Activity">Image File</string>
+    <string name="Display_Activity">Display Activity</string>
+    <string name="drawable">drawable</string>
+    <string name="String">String</string>
+    <string-array name="name_array">
+        <item>cleric</item>
+        <item>druid</item>
+        <item>monk</item>
+        <item>ranger</item>
+        <item>rogue</item>
+        <item>warlock</item>
+        <item>wizard</item>
+    </string-array>
+    <string name="click_image_below_to_view">Click Image Below to View</string>
 </resources>
