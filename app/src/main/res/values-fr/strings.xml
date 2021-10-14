@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" >DND APP</string>
+    <string name="app_name" >APPLICATION MDN</string>
     <string name="please_select_an_item">veuillez sélectionner un article</string>
     <string name="image_file" >Fichier d\'image</string>
     <string name="Selection_Activity">Fichier d\'image</string>
     <string name="Display_Activity">Afficher l\'activité</string>
-    <string name="drawable" translatable="false">drawable</string>
-    <string name="String" translatable="false">String</string>
-    <string name="Int" translatable="false">Int</string>
-    <string name="bundle" translatable="false">bundle</string>
-    <string name="blank" translatable="false"></string>
+    <string name="drawable">dessinable</string>
+    <string name="String">Chaîne de caractères</string>
+    <string name="Int">Int</string>
+    <string name="bundle">empaqueter</string>
+    <string name="blank"></string>
     <string-array name="name_array">
         <item>druide</item>
         <item>moine</item>
