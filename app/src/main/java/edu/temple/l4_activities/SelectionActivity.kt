@@ -23,7 +23,7 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        val myArray = resources.getStringArray(R.array.name_array)
         imageArray.add(ImageObject("druid",R.drawable.druid))
         imageArray.add(ImageObject("monk",R.drawable.monk))
         imageArray.add(ImageObject("ranger", R.drawable.ranger))
