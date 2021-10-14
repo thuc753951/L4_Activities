@@ -13,14 +13,14 @@ class DisplayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display)
-        Log.d("Second activity state", "onCreate() fired")
+        //Log.d("Second activity state", "onCreate() fired")
         val intent = intent
         val extras = intent.extras
         val imageView = findViewById<ImageView>(R.id.imageView)
         val textView = findViewById<TextView>(R.id.textView)
         val imageName : String
         if(extras != null){
-            imageName = extras.getString("String").toString()
+            imageName = extras.getString(getString(R.string.String)).toString()
         }else{
             imageName = ""
         }
@@ -33,6 +33,6 @@ class DisplayActivity : AppCompatActivity() {
 
     }
     private fun getId(context: Context, imageName: String): Int { //returns the object similar to R.drawable.imageName given a string input of the image
-        return context.resources.getIdentifier(imageName,"drawable", context.packageName)
+        return context.resources.getIdentifier(imageName,getString(R.string.drawable), context.packageName)
     }
 }
