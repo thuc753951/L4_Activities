@@ -23,18 +23,19 @@ class SelectionActivity : AppCompatActivity(), ImageAdapter.OnItemClickListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val myArray = resources.getStringArray(R.array.name_array)
-        imageArray.add(ImageObject("druid",R.drawable.druid))
-        imageArray.add(ImageObject("monk",R.drawable.monk))
-        imageArray.add(ImageObject("ranger", R.drawable.ranger))
-        imageArray.add(ImageObject("rogue", R.drawable.rogue))
-        imageArray.add(ImageObject("warlock", R.drawable.warlock))
-        imageArray.add(ImageObject("wizard", R.drawable.wizard))
-        imageArray.add(ImageObject("cleric", R.drawable.cleric))
-        imageArray.add(ImageObject("barbarian", R.drawable.barbarian))
-        imageArray.add(ImageObject("bard", R.drawable.bard))
-        imageArray.add(ImageObject("fighter", R.drawable.fighter))
-        imageArray.add(ImageObject("paladin", R.drawable.paladin))
+        var myArray =resources.getStringArray(R.array.name_array) // cant place string resource collection before oncreate, since it will be null
+
+        imageArray.add(ImageObject(myArray[0],R.drawable.druid))
+        imageArray.add(ImageObject(myArray[1],R.drawable.monk))
+        imageArray.add(ImageObject(myArray[2], R.drawable.ranger))
+        imageArray.add(ImageObject(myArray[3], R.drawable.rogue))
+        imageArray.add(ImageObject(myArray[4], R.drawable.warlock))
+        imageArray.add(ImageObject(myArray[5], R.drawable.wizard))
+        imageArray.add(ImageObject(myArray[6], R.drawable.cleric))
+        imageArray.add(ImageObject(myArray[7], R.drawable.barbarian))
+        imageArray.add(ImageObject(myArray[8], R.drawable.bard))
+        imageArray.add(ImageObject(myArray[9], R.drawable.fighter))
+        imageArray.add(ImageObject(myArray[10], R.drawable.paladin))
 
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
